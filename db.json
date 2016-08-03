@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Awdhoot Lele",
+      "username": "awdhoot",
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "name": "Kumar Gaurav",
+      "username": "kumar",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "name": "Vijit Vijayan",
+      "username": "vijit",
+      "password": "password"
+    },
+    {
+      "id": 4,
+      "name": "Dummy Name",
+      "username": "Dummy",
+      "password": "password"
+    },
+    {
+      "id": 5,
+      "name": "Dummy Name 2",
+      "username": "Dummy2",
+      "password": "password"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
@@ -17,8 +18,8 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   module: {
-    preLoaders: [{test: /\.ts$/, loader: 'tslint'}],
-  }
+    preLoaders: [{test: /\.ts$/, loader: 'tslint'}]
+  },
 
   htmlLoader: {
     minimize: false // workaround for ng2
@@ -28,7 +29,9 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-    new ExtractTextPlugin('dist/[name].[hash].css'),
+    new ExtractTextPlugin('style/styles.css',{
+      allChunks: true
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         'ENV': JSON.stringify(ENV)
@@ -36,6 +39,8 @@ module.exports = webpackMerge(commonConfig, {
     }),
     new CopyWebpackPlugin([{
       from: helpers.root('public')
-    }])
+    }],{
+      ignore: ['*.scss']
+    })
   ]
 });

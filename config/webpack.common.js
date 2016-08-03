@@ -11,7 +11,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts', '.css', 'scss', 'html']
+    extensions: ['', '.js', '.ts', '.css', '.scss', '.html']
   },
 
   module: {
@@ -38,24 +38,17 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
       },
       {
-        test: /\.css$/,
-        include: helpers.root('src', 'app'),
-        loader: 'raw!postcss'
-      },
-      {
         test: /\.scss$/,
-        exclude: root('src', 'app'),
-        loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass')
-      }, 
-      {
-        test: /\.scss$/,
-        exclude: root('src', 'style'),
-        loader: 'raw!postcss!sass'
-      },
+        loader: ExtractTextPlugin.extract('css!sass')
+      }
     ]
   },
 
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
@@ -65,7 +58,7 @@ module.exports = {
     })
   ],
 
-  tslint = {
+  tslint : {
     emitErrors: false,
     failOnHint: false
   }
