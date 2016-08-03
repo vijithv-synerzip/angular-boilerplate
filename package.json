@@ -1,11 +1,13 @@
 {
-  "name": "angular2-webpack",
+  "name": "autoiq-starter",
   "version": "1.0.0",
-  "description": "A webpack starter for angular 2",
+  "license": "MIT",
+  "description": "A setup for autoiq",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "preinstall": "npm i -g typescript typings",
     "postinstall": "typings install"
   },
   "license": "MIT",
@@ -25,13 +27,20 @@
   },
   "devDependencies": {
     "angular2-template-loader": "^0.4.0",
+     "autoprefixer": "^6.3.2",
+    "codelyzer": "0.0.26",
+    "copy-webpack-plugin": "^3.0.0",
     "css-loader": "^0.23.1",
+    "sass-loader"
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.15.0",
     "jasmine-core": "^2.4.1",
+    "jasmine-spec-reporter": "^2.4.0",
+    "json-loader": "^0.5.3",
     "karma": "^0.13.22",
+    "karma-coverage": "^1.0.0",
     "karma-jasmine": "^0.3.8",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
