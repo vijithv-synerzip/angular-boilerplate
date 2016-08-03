@@ -16,6 +16,10 @@ module.exports = webpackMerge(commonConfig, {
     chunkFilename: '[id].[hash].chunk.js'
   },
 
+  module: {
+    preLoaders: [{test: /\.ts$/, loader: 'tslint'}],
+  }
+
   htmlLoader: {
     minimize: false // workaround for ng2
   },
@@ -24,11 +28,14 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-    new ExtractTextPlugin('[name].[hash].css'),
+    new ExtractTextPlugin('dist/[name].[hash].css'),
     new webpack.DefinePlugin({
       'process.env': {
         'ENV': JSON.stringify(ENV)
       }
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from: helpers.root('public')
+    }])
   ]
 });

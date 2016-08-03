@@ -11,7 +11,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js', '.ts', '.css', 'scss', 'html']
   },
 
   module: {
@@ -29,15 +29,29 @@ module.exports = {
         loader: 'file?name=assets/[name].[hash].[ext]'
       },
       {
+        test: /\.json$/,
+        loader: 'json'
+      },
+      {
         test: /\.css$/,
         exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
       },
       {
         test: /\.css$/,
         include: helpers.root('src', 'app'),
-        loader: 'raw'
-      }
+        loader: 'raw!postcss'
+      },
+      {
+        test: /\.scss$/,
+        exclude: root('src', 'app'),
+        loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass')
+      }, 
+      {
+        test: /\.scss$/,
+        exclude: root('src', 'style'),
+        loader: 'raw!postcss!sass'
+      },
     ]
   },
 
@@ -49,5 +63,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
-  ]
+  ],
+
+  tslint = {
+    emitErrors: false,
+    failOnHint: false
+  }
 };
