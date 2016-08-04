@@ -50,27 +50,13 @@ body {
   background: rgb(228, 105, 105);
 }
 /*New style css*/
-.vertical-align{
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .vertical-center {
   height:100%;
   width:100%;
-  text-align: center;  /* align the inline(-block) elements horizontally */
-  font: 0/0 a;         /* remove the gap between inline(-block) elements */
 }
-
-.vertical-center:before {    /* create a full-height inline block pseudo=element */
-  content: ' ';
-  display: inline-block;
-  vertical-align: middle;  /* vertical alignment of the inline element */
-  height: 100%;
-}
-
 .vertical-center > .container {
   max-width: inherit;
+  margin-top: 20%;
   width: inherit;
   display: inline-block;
   vertical-align: middle;
@@ -85,4 +71,10 @@ body {
   color: #fff;
   background-color: #008b63;
   border-color: #007963;
+}
+.info-glyphicon{
+  margin-top: 30px;
+  .glyphicon {
+    font-size: 50px;
+  }
 }
