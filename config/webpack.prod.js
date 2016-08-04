@@ -36,11 +36,6 @@ module.exports = webpackMerge(commonConfig, {
       'process.env': {
         'ENV': JSON.stringify(ENV)
       }
-    }),
-    //new CopyWebpackPlugin([{
-    //  from: helpers.root('public')
-    //}],{
-    //  ignore: ['*.scss']
-    //})
+    })
   ]
 });

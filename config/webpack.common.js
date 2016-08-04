@@ -33,13 +33,9 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$|\.css$/,
         exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
-      },
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css!sass')
+        loader: ExtractTextPlugin.extract('style','css!sass')
       }
     ]
   },
