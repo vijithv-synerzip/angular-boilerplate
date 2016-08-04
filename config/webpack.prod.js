@@ -3,12 +3,12 @@ var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+//var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
 
   output: {
     path: helpers.root('dist'),
@@ -29,7 +29,7 @@ module.exports = webpackMerge(commonConfig, {
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-    new ExtractTextPlugin('style/styles.css',{
+    new ExtractTextPlugin('style/[name].[hash].css', {
       allChunks: true
     }),
     new webpack.DefinePlugin({
@@ -37,10 +37,10 @@ module.exports = webpackMerge(commonConfig, {
         'ENV': JSON.stringify(ENV)
       }
     }),
-    new CopyWebpackPlugin([{
-      from: helpers.root('public')
-    }],{
-      ignore: ['*.scss']
-    })
+    //new CopyWebpackPlugin([{
+    //  from: helpers.root('public')
+    //}],{
+    //  ignore: ['*.scss']
+    //})
   ]
 });
