@@ -1,0 +1,88 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background-image: url("../../public/images/imgpsh_fullsize.png");
+  color: #fff;
+}
+
+.sample-app-content {
+  height: 100%; }
+
+.content {
+  margin-top: 50px;
+  height: inherit;
+  background-color: transparent;
+  color: #fff !important; }
+
+.navbar-autoIQ {
+  background-color: #07B576;
+  border-color: #fff; }
+
+.autoIQ-text {
+  color: #fff; }
+
+.nopadding {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.login-container{
+  position: relative;
+  margin: 0px auto;
+  padding: 0px 40px 0px 40px;
+  text-align: center;
+}
+
+#output{
+  position: absolute;
+  width: 300px;
+  top: -75px;
+  left: 0;
+  color: #fff;
+}
+
+#output.alert-success{
+  background: rgb(25, 204, 25);
+}
+
+#output.alert-danger{
+  background: rgb(228, 105, 105);
+}
+/*New style css*/
+.vertical-align{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+  text-align: center;  /* align the inline(-block) elements horizontally */
+  font: 0/0 a;         /* remove the gap between inline(-block) elements */
+}
+
+.vertical-center:before {    /* create a full-height inline block pseudo=element */
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+  height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: inherit;
+  width: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+.left-box{
+  border-right: 2px solid #fff;
+}
+.right-box{
+  border-left: 2px solid #fff;
+}
+.btn-autoIQ{
+  color: #fff;
+  background-color: #008b63;
+  border-color: #007963;
+}

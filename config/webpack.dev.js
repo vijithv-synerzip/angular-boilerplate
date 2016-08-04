@@ -15,7 +15,7 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   plugins: [
-    new ExtractTextPlugin('style/styles.css',{
+    new ExtractTextPlugin('style/[name].css',{
       allChunks: true
     }),
     new CopyWebpackPlugin([{
