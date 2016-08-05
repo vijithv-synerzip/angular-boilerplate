@@ -19,33 +19,12 @@ module.exports = function (config) {
     webpackMiddleware: {
       stats: 'errors-only'
     },
-
-    coverageReporter: {
-      dir: 'coverage/',
-      reporters: [{
-        type: 'json',
-        dir: 'coverage',
-        subdir: 'json',
-        file: 'coverage-final.json'
-      }]
-    },
-
-    remapIstanbulReporter: {
-      src: 'coverage/json/coverage-final.json',
-      reports: {
-        lcovonly: 'coverage/json/lcov.info',
-        html: 'coverage/html',
-        'text': null
-      },
-      timeoutNotCreated: 1000, // default value
-      timeoutNoMoreFiles: 1000 // default value
-    },
     
     webpackServer: {
       noInfo: true
     },
 
-    reporters: ["mocha", "coverage", "karma-remap-istanbul"],
+    reporters: ["progress"],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
