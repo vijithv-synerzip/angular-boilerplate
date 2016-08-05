@@ -17,11 +17,13 @@ This seed repo serves as an Angular 2 starter for anyone looking to get up and r
 
 >Warning: Make sure you're using the latest version of Node.js and NPM
 
+
+
+### Prerequisites
+
+[node](https://nodejs.org/en/download/). See [Dependencies](#dependencies) for more details.
+
 ### Quick start
-
-#Prerequisites
-
-*[node && npm](https://nodejs.org/en/download/) see 'Dependencies'for more details.
 
 > Clone/Download the repo then edit `app.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
 
@@ -104,7 +106,7 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 
 
-### Scripts and Purpose
+## Scripts and Purpose
 These are the various node scripts and their descriptions. if user does not have admin rights,
 then add 'sudo' prefix in these commands.
 
