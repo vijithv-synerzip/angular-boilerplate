@@ -1,3 +1,9 @@
+/**
+ * Config file for karma unit tests.
+ * Imports shims from karma-test-shim.js
+ * @type {exports}
+ */
+
 var webpackConfig = require('./webpack.test');
 
 module.exports = function (config) {

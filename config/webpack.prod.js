@@ -1,3 +1,9 @@
+/**
+ * This webpack configuration file specifies necessary configurations needed in production mode.
+ * It loads common configuration from webpack.common.js and appends extra configurations needed for prod mode.
+ * @type {webpack|exports}
+ */
+
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');

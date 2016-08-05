@@ -1,3 +1,9 @@
+/**
+ * Basic configuration for webpack. test env and prod env configs import this basic configuration.
+ * webpack.config.js loads dev config.
+ * @type {webpack|exports}
+ */
+
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');

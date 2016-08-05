@@ -1,3 +1,9 @@
+/**
+ * This webpack configuration file specifies necessary configurations needed in development mode.
+ * It loads common configuration from webpack.common.js and appends extra configurations needed for dev mode.
+ * @type {webpack|exports}
+ */
+
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var commonConfig = require('./webpack.common.js');

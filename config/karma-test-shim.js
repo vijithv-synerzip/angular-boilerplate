@@ -1,3 +1,9 @@
+/**
+ * Configuration for Karma-test module.
+ * Adds all dependencies (shims) necessary for Karma unit tests
+ * @type {Infinity|*|number}
+ */
+
 Error.stackTraceLimit = Infinity;
 
 require('core-js/es6');
