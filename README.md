@@ -19,6 +19,10 @@ This seed repo serves as an Angular 2 starter for anyone looking to get up and r
 
 ### Quick start
 
+#Prerequisites
+
+*[node && npm](https://nodejs.org/en/download/) see 'Dependencies'for more details.
+
 > Clone/Download the repo then edit `app.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
 
 ```bash
@@ -54,6 +58,7 @@ go to [http://localhost:8080](http://localhost:8080) in your browser.
 
 What you need to run this app:
 * `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
+* Install [node](https://nodejs.org/en/download/)
 * Ensure you're running Node (`v5.x.x`+) and NPM (`3.x.x`+)
 
 ## Installing
@@ -96,3 +101,22 @@ It will start a local server using `webpack-dev-server` which will watch, build 
   * instead of the last command above, you can run: `npm run e2e-live`
   * when debugging or first writing test suites, you may find it helpful to try out Protractor commands without starting up the entire test suite. You can do this with the element explorer.
   * you can learn more about [Protractor Interactive Mode here](https://github.com/angular/protractor/blob/master/docs/debugging.md#testing-out-protractor-interactively)
+
+
+
+### Scripts and Purpose
+These are the various node scripts and their descriptions. if user does not have admin rights,
+then add 'sudo' prefix in these commands.
+
+| Script     | Purpose    |
+| --------|---------|
+| npm run clean  | To clean node_modules, dist folder, and to  clean  npm cache.  |
+| npm run start  |  To start server locally (visit [http://localhost:8080](http://localhost:8080))   |
+| npm run clean-start  |   Delete, Reinstall npm dependencies , and start server. |
+| npm run build |  To build dist folder for production. |
+| npm run e2e|   To run end to end testing using protractor.  |
+| npm run test| To run unit testing    |
+| npm run complete-test  | To run unit testing and end to end testing    |
+| npm run test-build |  To run unit tests and then build dist for production   |
+| npm run test-start  |  To run unit tests and start server locally (visit [http://localhost:8080](http://localhost:8080))   |
+| npm run clean-test-start  |  to clean and Reinstall node dependencies, running tests and start server locally |
