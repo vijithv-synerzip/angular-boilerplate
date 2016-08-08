@@ -2,7 +2,7 @@
 
 **Note: This guide is following the Angular's [Style Guide](http://angular.io/styleguide)**
 
-A complete, yet simple, starter for Angular 2 using Webpack.
+A complete, starter for Angular 2 using Webpack.
 
 This seed repo serves as an Angular 2 starter for anyone looking to get up and running with Angular 2 and TypeScript fast.
  Using [Webpack](http://webpack.github.io/) for building our files and assisting with boilerplate. We're also using
@@ -32,7 +32,10 @@ This seed repo serves as an Angular 2 starter for anyone looking to get up and r
 $ cd angular-boilerplate
 
 # install the dependencies with npm
-$ npm install | sudo npm install
+$ npm install
+
+# update selenium server
+npm run webdriver-update
 
 # start the server
 $ npm run start
@@ -68,7 +71,7 @@ What you need to run this app:
 After you have installed all dependencies you can now run the app with:
 
 ```bash
-npm run  start
+npm start
 ```
 
 It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
@@ -77,42 +80,33 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 ### Build files
 
-* single run: `npm run build`
-* build files and watch: `npm run watch`
+* `npm run build`
 
 ## Testing
 
 #### 1. Unit Tests
 
-* single run: `npm test`
-* live mode (TDD style): `npm run test-watch`
+* `npm test`
 
 #### 2. End-to-End Tests (aka. e2e, integration)
 
-* single run:
-  * in a tab, *if not already running!*: `npm start`
-  * in a new tab: `npm run webdriver-start`
-  * in another new tab: `npm run e2e`
-* interactive mode:
-  * instead of the last command above, you can run: `npm run e2e-live`
-  * when debugging or first writing test suites, you may find it helpful to try out Protractor commands without starting up the entire test suite. You can do this with the element explorer.
-  * you can learn more about [Protractor Interactive Mode here](https://github.com/angular/protractor/blob/master/docs/debugging.md#testing-out-protractor-interactively)
-
-
+* in a tab, *if not already running!*: `npm start`
+* in a new tab: `npm run webdriver-start`
+* in another new tab: `npm run e2e`
 
 ## Scripts and Purpose
 These are the various node scripts and their descriptions. if user does not have admin rights,
 then add 'sudo' prefix in these commands.
 
-| Script     | Purpose    |
-| --------|---------|
-| npm run clean  | To clean node_modules, dist folder, and to  clean  npm cache.  |
-| npm run start  |  To start server locally (visit [http://localhost:8080](http://localhost:8080))   |
-| npm run clean-start  |   Delete, Reinstall npm dependencies , and start server. |
-| npm run build |  To build dist folder for production. |
-| npm run e2e|   To run end to end testing using protractor.  |
-| npm run test| To run unit testing    |
-| npm run complete-test  | To run unit testing and end to end testing    |
-| npm run test-build |  To run unit tests and then build dist for production   |
-| npm run test-start  |  To run unit tests and start server locally (visit [http://localhost:8080](http://localhost:8080))   |
-| npm run clean-test-start  |  to clean and Reinstall node dependencies, running tests and start server locally |
+| Script                    |  Purpose                                                                                           |
+| --------------------------|----------------------------------------------------------------------------------------------------|
+| npm run e2e               |  To run end to end testing using protractor.                                                       |
+| npm run lint              |  To run TSLint check.                                                                              |
+| npm run test              |  To run unit testing.                                                                              |
+| npm run webdriver-update  |  To update selenium standalone server.                                                             |
+| npm run webdriver-start   |  To start selenium standalone server.                                                              |
+| npm run start             |  To start server locally (visit [http://localhost:8080](http://localhost:8080))                    |
+| npm run clean             |  To remove node_modules, dist folder, and to  clean  npm cache.                                    |
+| npm run clean-install     |  To clean(`npm run clean`) and reinstall npm dependencies.                                         |
+| npm run test-build        |  To run linting, unit tests and then build dist for production                    |
+| npm run test-start        |  To run unit tests and start server locally (visit [http://localhost:8080](http://localhost:8080)) |
