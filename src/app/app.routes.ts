@@ -14,10 +14,6 @@ const routes : RouterConfig =[
         path: '',
         redirectTo: '/login',
         pathMatch: 'full'
-    },
-    {
-        path: 'test',
-        component: Test
     }
 
 ];
