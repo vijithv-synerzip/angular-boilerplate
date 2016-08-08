@@ -11,16 +11,12 @@
     "webdriver-start": "webdriver-manager start",
     "start": "webpack-dev-server --inline --progress --port 8080",
 
-    "clean": "rm -rf node_modules doc dist && npm cache clean",
-    "clean-start": "npm run clean && npm install && npm start",
+    "clean": "rm -rf node_modules dist && npm cache clean",
+    "clean-install": "npm run clean && npm install",
 
     "build": "rm -rf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "test-build": "npm run lint && npm run test && npm run build",
+    "test-build": "npm run lint && npm run test && npm run e2e && npm run build",
     "test-start": "npm run test && npm start",
-    "complete-test": "npm run e2e && npm run test",
-
-
-    "clean-test-start": "npm run clean && npm install && npm run test-start",
 
     "postinstall": "typings install"
   },

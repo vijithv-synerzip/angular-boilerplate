@@ -25,8 +25,6 @@ This seed repo serves as an Angular 2 starter for anyone looking to get up and r
 
 ### Quick start
 
-> Clone/Download the repo then edit `app.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
-
 ```bash
 # clone our repo
 
@@ -38,10 +36,6 @@ $ npm install | sudo npm install
 
 # start the server
 $ npm run start
-
-# IF it gives typings errors, It meants ```postinstall``` command is not run. run it mannualy
-$ npm run webdriver-update && typings install | sudo npm run webdriver-update && sudo typings install
-
 ```
 go to [http://localhost:8080](http://localhost:8080) in your browser.
 

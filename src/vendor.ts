@@ -14,9 +14,14 @@ import '@angular/router';
 // RxJS
 import 'rxjs';
 
-/*styles sheets*/
+// Other vendors for example jQuery, Lodash or Bootstrap
+// You can import js, ts, css, sass, ...
 import 'jquery/dist/jquery.min';
 import 'bootstrap/dist/js/bootstrap.min';
+
+/*styles sheets*/
+import 'bootstrap/dist/css/bootstrap.min';
+
 
 /*fonts*/
 import 'opensans-npm-webfont';
