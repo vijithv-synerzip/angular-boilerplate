@@ -3,13 +3,13 @@ html, body {
   height: 100%;
 }
 body {
-  background-image: url("../../public/images/imgpsh_fullsize.png");
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-style: normal;
-  background-color: #f4f4f4;
-  line-height: 1.5;
-  color: #333333;
+
+}
+.container-fluid{
+  height: 100%!important;
 }
 
 .sample-app-content {
@@ -20,7 +20,8 @@ body {
   margin-top: 50px;
   height: inherit;
   background-color: transparent;
-  color: #fff !important; }
+  color: #fff !important;
+}
 
 .navbar-autoIQ {
   background-color: #07B576;
@@ -39,6 +40,10 @@ body {
   padding: 0px 40px 0px 40px;
   text-align: center;
   color: #fff;
+  background-image: url("../../public/images/imgpsh_fullsize.png");
+
+
+
 }
 
 #output{
@@ -85,4 +90,19 @@ body {
   .glyphicon {
     font-size: 40px;
   }
+}
+.landing-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-image: url("/public/images/Home_page_banner_08_2000x301_RGB_72dpi.jpg");
+  background-size: cover;
+  color: #ffffff;
+}
+.home-content{
+  //background: transparent !important;
+}
+
+footer{
+  padding: 50px 0;
 }

@@ -10,15 +10,14 @@
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start",
     "start": "webpack-dev-server --inline --progress --port 8080",
-
     "clean": "rm -rf node_modules dist && npm cache clean",
     "clean-install": "npm run clean && npm install",
-
     "build": "rm -rf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "test-build": "npm run lint && npm run test && npm run build",
     "test-start": "npm run test && npm start",
-
-    "postinstall": "typings install"
+    "postinstall": "typings install",
+    "jserver":"json-server db.json",
+    "mock": "npm run jserver | npm start"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
