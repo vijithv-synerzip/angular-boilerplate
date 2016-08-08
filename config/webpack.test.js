@@ -1,3 +1,8 @@
+/**
+ * This webpack configuration file specifies necessary configurations needed in test mode.
+ * @type {webpack|exports}
+ */
+
 module.exports = {
   devtool: 'inline-source-map',
 

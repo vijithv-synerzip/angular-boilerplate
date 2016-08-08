@@ -4,11 +4,17 @@ html, body {
 }
 body {
   background-image: url("../../public/images/imgpsh_fullsize.png");
-  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  background-color: #f4f4f4;
+  line-height: 1.5;
+  color: #333333;
 }
 
 .sample-app-content {
-  height: 100%; }
+  height: 100%;
+}
 
 .content {
   margin-top: 50px;
@@ -32,6 +38,7 @@ body {
   margin: 0px auto;
   padding: 0px 40px 0px 40px;
   text-align: center;
+  color: #fff;
 }
 
 #output{
@@ -74,7 +81,8 @@ body {
 }
 .info-glyphicon{
   margin-top: 30px;
+  color:#fff;
   .glyphicon {
-    font-size: 50px;
+    font-size: 40px;
   }
 }

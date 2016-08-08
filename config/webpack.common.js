@@ -1,3 +1,9 @@
+/**
+ * Basic configuration for webpack. test env and prod env configs import this basic configuration.
+ * webpack.config.js loads dev config.
+ * @type {webpack|exports}
+ */
+
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -29,22 +35,17 @@ module.exports = {
         loader: 'file?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /\.json$/,
-        loader: 'json'
-      },
-      {
-        test: /\.css$/,
+        test: /\.scss$|\.css$/,
         exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
-      },
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css!sass')
+        loader: ExtractTextPlugin.extract('style','css!sass')
       }
     ]
   },
 
   plugins: [
+    new ExtractTextPlugin('style/[name].css', {
+      allChunks: true
+    }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
@@ -52,7 +53,6 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
-
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
