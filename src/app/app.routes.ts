@@ -3,6 +3,7 @@
  */
 import {provideRouter, RouterConfig} from '@angular/router';
 import {LoginPage} from './loginPage.ts';
+import {HomeComponent} from './app.home.ts';
 
 
 const routes : RouterConfig =[
@@ -14,6 +15,10 @@ const routes : RouterConfig =[
         path: '',
         redirectTo: '/login',
         pathMatch: 'full'
+    },
+    {
+        path: 'home',
+       component:HomeComponent
     }
 
 ];

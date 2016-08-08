@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +14,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
     directives:[ROUTER_DIRECTIVES]
 })
 export class LoginPage {
-    constructor(private http:Http){
+    constructor(private http:Http, private router:Router){
 
     }
     public username: string = "";
@@ -25,8 +25,10 @@ export class LoginPage {
     };
     handleSubmit(event: any){
         console.log("HELLO 123", this.username, this.password);
-        let data= this.getUser(this.username, this.password);
+        console.log("HELLO 567", this.router);
+        //let data= this.getUser(this.username, this.password);
         //console.log(data);
+        this.router.navigate(['home']);
     }
     getUser(username:string, password:string){
         let obj= {

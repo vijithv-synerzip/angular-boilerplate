@@ -7,6 +7,8 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import {HomeComponent} from './app.home';
+
 
 @Component({
   selector: 'autoiq-app',
@@ -14,5 +16,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
     directives: [ROUTER_DIRECTIVES]
 })
 export class AppComponent {
+    constructor(){
+
+    }
 
 }
