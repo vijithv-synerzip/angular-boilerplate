@@ -32,6 +32,16 @@ module.exports = webpackMerge(commonConfig, {
   ],
   devServer: {
     historyApiFallback: true,
-    stats: 'minimal'
+    stats: 'minimal',
+    proxy: {
+      '/api/*': {
+        target: 'http://localhost:3000',
+        secure: false,
+        rewrite: function (request) {
+          console.log('REQUEST -> ', request);
+          request.url = request.url.replace(/^\/mock/, '');
+        }
+      }
+    }
   }
 });
