@@ -3,14 +3,14 @@
 *
 * */
 import {provideRouter, RouterConfig} from '@angular/router';
-import {LoginPage} from './login/login.component.ts';
-import {HomeComponent} from './home/home.component.ts';
+import {LoginComponent} from './login/login.component';
+import {HomeComponent} from './home/home.component';
 
 
-const routes : RouterConfig =[
+const routes: RouterConfig = [
     {
         path: 'login',
-        component: LoginPage
+        component: LoginComponent
     },
     {
         path: '',
@@ -19,11 +19,11 @@ const routes : RouterConfig =[
     },
     {
         path: 'home',
-       component:HomeComponent
+       component: HomeComponent
     }
 
 ];
 
-export const ROUTE_PROVIDERS = [
+export const appRouterProviders = [
     provideRouter(routes)
 ];
