@@ -9,7 +9,9 @@ import { AppComponent } from './app/app.component';
 import { disableDeprecatedForms, provideForms } from '@angular/forms';
 import { appRouterProviders } from './app/app.routes';
 
+
 import '../public/style/style.scss';
+import '../public/style/login.scss';
 
 if (process.env.ENV === 'production') {
   enableProdMode();

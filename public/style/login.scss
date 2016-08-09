@@ -1,0 +1,68 @@
+.login-container{
+  position: relative;
+  margin: 0px auto;
+  padding: 0px 40px 0px 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+}
+.vertical-center > .container-fluid {
+  max-width: inherit;
+  height: inherit;
+  width: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+.left-box{
+  background-image: url("../../public/images/imgpsh_fullsize.png");
+  border-right: 2px solid #fff;
+  height: 100%;
+  padding-top: 20%;
+}
+.right-box{
+  border-left: 2px solid #fff;
+  padding-top: 10%;
+  background-color: rgba(255,255,255,0.95);
+
+}
+.col-sm-12.right-box, .col-md-12.right-box{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+@media (min-width : 768px) {
+  .right-box{
+    padding-top: 20%;
+  }
+}
+.info-glyphicon{
+  margin-top: 20px;
+  margin-right: 5px;
+  color:#fff;
+  .glyphicon {
+    font-size: 40px;
+  }
+}
+
+.logo-text{
+  font-size: 100px;
+  Color: rgba(255,255,255,0.9);
+  font-weight: bold;
+}
+.autoiq-logo {
+  text-align: center;
+  background-size: cover;
+  color: #ffffff;
+}
+.border-less {
+  border: none;
+  td, th {
+    border: none;
+  }
+}
+.autoiq-logo .img-responsive {
+  margin: 0 auto;
+}

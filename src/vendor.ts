@@ -22,7 +22,5 @@ import 'bootstrap/dist/js/bootstrap.min';
 /*styles sheets*/
 import 'bootstrap/dist/css/bootstrap.min';
 
-
 /*fonts*/
 import 'opensans-npm-webfont';
-

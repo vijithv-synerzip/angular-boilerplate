@@ -6,7 +6,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-style: normal;
-
 }
 .container-fluid{
   height: 100%!important;
@@ -23,86 +22,38 @@ body {
   color: #fff !important;
 }
 
-.navbar-autoIQ {
-  background-color: #07B576;
-  border-color: #fff; }
+.autoiq-text {
+  color: #fff;
+}
+.autoiq-larger-text{
+  font-size: 16px;
+}
+.text-default{
+  color: #666;
+}
 
-.autoIQ-text {
-  color: #fff; }
-
-.nopadding {
+.no-padding {
   padding-left: 0px !important;
-  padding-right: 0px !important; }
+  padding-right: 0px !important;
+}
+.information-container{
 
-.login-container{
-  position: relative;
-  margin: 0px auto;
-  padding: 0px 40px 0px 40px;
-  text-align: center;
-  color: #fff;
-  background-image: url("../../public/images/imgpsh_fullsize.png");
-
-
-
-}
-
-#output{
-  position: absolute;
-  width: 300px;
-  top: -75px;
-  left: 0;
-  color: #fff;
-}
-
-#output.alert-success{
-  background: rgb(25, 204, 25);
-}
-
-#output.alert-danger{
-  background: rgb(228, 105, 105);
-}
-/*New style css*/
-.vertical-center {
-  height:100%;
-  width:100%;
-}
-.vertical-center > .container {
-  max-width: inherit;
-  margin-top: 20%;
-  width: inherit;
-  display: inline-block;
-  vertical-align: middle;
-}
-.left-box{
-  border-right: 2px solid #fff;
-}
-.right-box{
-  border-left: 2px solid #fff;
-}
-.btn-autoIQ{
-  color: #fff;
-  background-color: #008b63;
-  border-color: #007963;
-}
-.info-glyphicon{
-  margin-top: 30px;
-  color:#fff;
-  .glyphicon {
-    font-size: 40px;
-  }
-}
-.landing-content {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-  background-image: url("/public/images/Home_page_banner_08_2000x301_RGB_72dpi.jpg");
-  background-size: cover;
-  color: #ffffff;
 }
 .home-content{
   //background: transparent !important;
 }
 
 footer{
-  padding: 50px 0;
+  border-left: 2px solid #fff;
+}
+.theme-selector {
+  margin-right: 20px;
+}
+.error-box{
+   padding-top: 5px;
+   color: #ffffff;
+   background-color: #ff4f85;
+   border-radius: 4px;
+   height: 34px;font-size: 14px;
+   text-align: center;
 }
